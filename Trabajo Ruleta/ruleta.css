@@ -1,0 +1,505 @@
+body {
+  background-image: url(fondo.jpg);
+  background-size: cover; /* Ajusta la imagen de fondo al tamaño de la ventana */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  font-family: Arial, sans-serif; /* Cambia la fuente del texto */
+}
+
+/*CABECERA*/
+
+.cabeza {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: white;
+}
+
+/*LOGO*/
+
+.logo {
+  position: relative;
+}
+
+.logo_caliente {
+  width: 20px;
+  height: 20px;
+}
+
+/*HORA*/
+.reloj{
+  position: relative;
+  font-size: 18px;
+
+}
+
+.hora {
+  margin-left: 20%;
+}
+
+#crono {
+  height: 30px;
+  width: 90px;
+  font-family: 'Courier New', Courier, monospace;
+  border: 3px solid gold;
+  background-color: rgba(110, 66, 33, 0.626);
+  color:antiquewhite ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/*SALDO Y BOTON INGRESAR SALDO*/
+
+ul {
+  float: right;
+  list-style: none;
+  text-align: center;
+  vertical-align: top;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+
+}
+
+.botones {
+  position: absolute;
+  margin-left: 80%;
+}
+
+#cuadro_saldo {
+  color:gold;
+  padding: 13px 15px;
+  background-color: black;
+}
+
+#bot_ingresar {
+  line-height: 30px;
+  color:black;
+  background-color:lime;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#bot_ingresar:hover {
+  color: white;
+  background-color: black;
+}
+
+/*MAIN*/
+
+/*CUADRO CARACTERISTICAS*/
+
+#cuadro_caracteristicas {
+  position: relative;
+
+}
+
+#cuadro {
+  float: right;
+  padding: 5px; 
+  border: 1px solid black;
+  margin-top: -10%;
+  margin-right: 7%;
+  background-color:antiquewhite;
+  border-radius: 10%;
+  width: 300px;
+  height: 200px;
+}
+
+/*TABLA NUMEROS*/
+.num_CF {
+  position: relative;
+
+}
+
+#table_num_CF {
+  background-color: rgba(22, 64, 32, 0.479);
+  margin-right: 30%;
+  margin-top: -2%;
+  float: right;
+  width: 500px;
+  height: 180px;
+}
+
+#d_num {
+  border: 3px solid rgb(18, 58, 18);
+
+
+}
+
+#d_C {
+  border: 3px solid rgb(18, 58, 18);
+  
+}
+
+#d_F {
+  border: 3px solid rgb(18, 58, 18);
+}
+
+#numeros {
+  margin: auto;
+  height: 20px;
+}
+
+#calientes {
+  margin: auto;
+
+}
+
+#frios {
+  margin: auto;
+}
+
+
+/*BOTONES, FICHAS y BARRA PROGRESO*/
+.selected {
+  background-color: blue; /* Cambia el color según tus preferencias */
+  color: white;
+}
+
+.bot_ficha {
+  position: relative;
+  padding: 20px; 
+
+}
+
+.bot_inicio {
+  float: center;
+  margin-top: 10%;
+  margin-left: 40%;
+  width: 350px;
+ 
+}
+
+#bot_borrar {
+  line-height: 25px;
+  color:black;
+  background-color:lime;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+#bot_borrar:hover {
+  color: white;
+  background-color: black;
+}
+
+#ficha1 {
+color:aliceblue;
+background-color:deeppink;
+border: 3px solid gold  ;
+width: 45px; 
+height: 45px;
+border-radius: 50%; 
+text-align: center; 
+line-height: 70%;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+#ficha1:hover{
+  background-color: #45aaf2;
+}
+
+
+
+#ficha2 {
+  color:aliceblue;
+  background-color:blue;
+  border: 3px solid gold  ;
+  width: 45px; 
+  height: 45px;
+  border-radius: 50%; 
+  text-align: center; 
+  line-height: 70%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#ficha2:hover{
+  background-color: #45aaf2;
+}
+
+#ficha3 {
+  color:aliceblue;
+  background-color:orangered;  
+  border: 3px solid gold;
+  width: 45px; 
+  height: 45px;
+  border-radius: 50%; 
+  text-align: center; 
+  line-height: 70%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#ficha3:hover{
+  background-color: #45aaf2;
+}
+
+#ficha4 {
+  color:aliceblue;
+  background-color:purple;
+  border: 3px solid gold ;
+  width: 45px; 
+  height: 45px;
+  border-radius: 50%; 
+  text-align: center; 
+  line-height: 70%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#ficha4:hover{
+  background-color: #45aaf2;
+}
+
+#bar_progreso {
+  border: 1px solid black;
+  background-color: black;
+  height: 20px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0;
+  height: 10px;
+  background-color: #73ff00;
+  border-radius: 5px;
+}
+
+
+/*RULETA*/
+
+.ruleta {
+position: absolute;
+}
+
+.rule {
+  margin-top: -70%;
+}
+
+
+
+/*TABLA RULETA*/
+.tabla {
+  position: relative;
+}
+
+
+table {
+  align-items: center;
+  margin-top: 3%;
+  margin-left: 30%;
+}
+
+
+#a {
+  background-color: green;
+  text-align: center;
+  border: 1px solid white;
+
+}
+
+#r {
+
+  background-color: red;
+  text-align: center;
+  border: 1px solid white;
+
+}
+
+#n {
+  background-color: black;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.bot_rojos {
+  color: white;
+  background-color: red;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bot_rojos:hover{
+  background-color: #45aaf2;
+}
+
+
+
+.bot_negros {
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bot_negros:hover{
+  background-color: #45aaf2;
+}
+
+.bot_0 {
+  color: white;
+  background-color: green;
+  border: none;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bot_0:hover{
+  background-color: #45aaf2;
+}
+
+
+.bot_arriba {
+  color: white;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bot_arriba:hover{
+  background-color: #45aaf2;
+}
+
+.bot_abajo {
+  color: white;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bot_abajo:hover{
+  background-color: #45aaf2;
+}
+
+
+.bot_d {
+  color: white;
+  background-color: green;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bot_d:hover{
+  background-color: #45aaf2;
+}
+
+
+#rombo_rojo ,#rombo_negro {
+  margin: auto;
+}
+
+#no {
+  empty-cells: hide;
+
+}
+
+.rombo1 {
+  width: 15.5px;
+  height: 15.5px;
+  background: red;
+  color: transparent;
+  -webkit-transform: rotate(135deg) skew(15deg, 15deg);
+  -moz-transform: rotate(135deg) skew(15deg, 15deg);
+  -ms-transform: rotate(135deg) skew(15deg, 15deg);
+  -o-transform: rotate(135deg) skew(15deg, 15deg);
+  transform: rotate(135deg) skew(15deg, 15deg);
+}
+
+.rombo2 {
+  width: 15.5px;
+  height: 15.5px;
+  background: black;
+  color: transparent;
+  -webkit-transform: rotate(135deg) skew(15deg, 15deg);
+  -moz-transform: rotate(135deg) skew(15deg, 15deg);
+  -ms-transform: rotate(135deg) skew(15deg, 15deg);
+  -o-transform: rotate(135deg) skew(15deg, 15deg);
+  transform: rotate(135deg) skew(15deg, 15deg);
+}
+
+/*BOTON COBRAR Y BENEFICIO*/
+.bloc_beneficio_cobrar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.beneficio_cobrar {
+  margin-top: -15%;
+  margin-left: 10%;
+}
+
+
+#beneficio {
+  background-color: black;
+  color: gold;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+}
+
+#cobrar {
+  width: 100px;
+  height: 100px;
+  font-family: serif;
+  color: aliceblue;
+  background-color: red;
+  border: 5px solid black;
+  border-radius: 35%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#cobrar:hover{
+  background-color: #45aaf2;
+}
+
+

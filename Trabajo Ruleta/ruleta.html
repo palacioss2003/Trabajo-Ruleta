@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ruleta.css">
+
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="cabeza">
+            <div class="logo">
+                <img src="logo.png" width="70" height="70">
+            </div>
+            <div class="botones">
+                <nav>
+                    <ul>
+                        <li><a id="cuadro_saldo">Saldo: <label id="euros"> 0 €</label></a></li>
+                        <li><button type="submit" id="bot_ingresar">INGRESAR</button></li>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="reloj">
+            <div class="hora">
+                <p id="crono"></p>
+            </div>
+        </div>
+
+      
+
+        <div class="num_CF">
+            <table id="table_num_CF">
+                <tr id="r_CF">
+                    <td id="d_num">
+                        <p id="numeros"></p>
+                    </td>
+                </tr>
+                <tr id="r_CF">
+                    <td id="d_C">
+                        <img src="calientes.jpeg" id="logo_caliente" width="50" height="50">
+                        <label id="calientes"></label>
+                    </td>
+                </tr>
+                <tr id="r_CF">
+                    <td id="d_F">
+                        <img src="frios.jpeg" id="logo_frio" width="50" height="50">
+                        <label id="frios"></label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="cuadro_caracteristicas">
+            <div id="cuadro">
+                <p><b>Saldo:</b> <label id="euro">0</label></p>
+                <p><b>Fichas:</b> <label id="tipo_ficha">0</label></p>
+                <p><b>Numeros apostados:</b> <label id="num_apos">0</label></p>
+                <p><b>Apuestas:</b> <label id="apostar"></label>0</p>
+            </div>
+        </div>
+      
+        <div class="bot_ficha">
+            <div class="bot_inicio">
+                <button id='spin'>Comenzar</button>
+                <button id="ficha1">1</button>
+                <button id="ficha2">5</button>
+                <button id="ficha3">10</button>
+                <button id="ficha4">50</button>
+                <button id='bot_borrar'><img src="goma.png" width="30px" height="30px"> </button>
+
+            </div>
+        </div>
+
+       
+
+        <div class="ruleta">
+            <div class="rule">
+                <canvas id="canvas" width="395" height="395"></canvas>
+            </div>
+        </div>
+
+
+
+        <div class="tabla" id="miTabla">
+            <table>
+                <tr>
+                    <td id="no"></td>
+                    <td id="bar_progreso" colspan="12">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </td>
+                </tr>  
+                <tr>
+                    <td id="no"></td>
+                    <td id="a" colspan="4"><button class="bot_arriba" id="boton1-12">1-12</button></td>
+                    <td id="a" colspan="4"><button class="bot_arriba" id="boton13-24">13-24</button></td>
+                    <td id="a" colspan="4"><button class="bot_arriba" id="boton25-36">25-36</button></td>
+                </tr>
+                <tr>
+                    <td id="a" rowspan="3"><button class="bot_0" id="boton0">0</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton3"> 3</button></td>
+                    <td id="n"><button class="bot_negros" id="boton6"> 6</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton9"> 9</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton12">12</button></td>
+                    <td id="n"><button class="bot_negros" id="boton15">15</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton18">18</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton21">21</button></td>
+                    <td id="n"><button class="bot_negros" id="boton24">24</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton27">27</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton30">30</button></td>
+                    <td id="n"><button class="bot_negros" id="boton33">33</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton36">36</button></td>
+                    <td id="a"><button class="bot_d" id="boton2to1_1">2 to 1</button></td>
+                </tr>
+                <tr>
+                    <td id="n"><button class="bot_negros" id="boton2"> 2</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton5"> 5</button></td>
+                    <td id="n"><button class="bot_negros" id="boton8"> 8</button></td>
+                    <td id="n"><button class="bot_negros" id="boton11">11</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton14">14</button></td>
+                    <td id="n"><button class="bot_negros" id="boton17">17</button></td>
+                    <td id="n"><button class="bot_negros" id="boton20">20</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton23">23</button></td>
+                    <td id="n"><button class="bot_negros" id="boton26">26</button></td>
+                    <td id="n"><button class="bot_negros" id="boton29">29</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton32">32</button></td>
+                    <td id="n"><button class="bot_negros" id="boton35">35</button></td>
+                    <td id="a"><button class="bot_d" id="boton2to1_2">2 to 1</button></td>
+                </tr>
+                <tr>
+
+                    <td id="r"><button class="bot_rojos" id="boton1"> 1</button></td>
+                    <td id="n"><button class="bot_negros" id="boton4"> 4</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton7"> 7</button></td>
+                    <td id="n"><button class="bot_negros" id="boton10">10</button></td>
+                    <td id="n"><button class="bot_negros" id="boton13">13</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton16">16</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton19">19</button></td>
+                    <td id="n"><button class="bot_negros" id="boton22">22</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton25">25</button></td>
+                    <td id="n"><button class="bot_negros" id="boton28">28</button></td>
+                    <td id="n"><button class="bot_negros" id="boton31">31</button></td>
+                    <td id="r"><button class="bot_rojos" id="boton34">34</button></td>
+                    <td id="a"><button class="bot_d" id="boton2to1_3">2 to 1</button></td>
+                </tr>
+                <tr>
+                    <td id="no"></td>
+                    <td id="a" colspan="2"><button class="bot_abajo" id="boton1-10">1-10</button></td>
+                    <td id="a" colspan="2"><button class="bot_abajo" id="botonEVEN">EVEN</button></td>
+                    <td id="a" colspan="2"><button class="bot_abajo" id="boton_romboR">
+                            <p class="rombo1" id="rombo_rojo" >rojo</p>
+                        </button></td>
+                    <td id="a" colspan="2"><button class="bot_abajo" id="boton_romboN">
+                            <p class="rombo2" id="rombo_negro">Negro</p>
+                        </button></td>
+                    <td id="a" colspan="2"><button class="bot_abajo" id="botonODD">ODD</button></td>
+                    <td id="a" colspan="2"><button class="bot_abajo" id="boton19-36">19-36</button></td>
+                </tr>
+            </table>
+        </div>
+       
+        <div class="bloc_beneficio_cobrar">
+            <div class="beneficio_cobrar">
+                <div id="beneficio">
+                    <a>BENEFICIO:<br><label id="num_beneficio"></label></a>
+                </div><br>
+                <div id="bot_cobrar">
+                    <button type="submit" id='cobrar'>COBRAR</button>
+                </div>
+            </div>
+        </div>
+       
+
+
+    </main>
+
+
+
+
+
+
+
+    <script src="ruleta.js"></script>
+</body>
+
+</html>
